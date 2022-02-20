@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --red: hsl(14, 88%, 65%);
+    --violet: hsl(273, 75%, 66%);
+    --blue: hsl(240, 73%, 65%);
+    --dark-blue: hsl(238, 29%, 16%);
+    --dark-gray-blue: hsl(237, 12%, 33%);
+    --gray-blue: hsl(240, 6%, 50%);
+    --light-gray-blue: hsl(240, 5%, 91%);
+}
+
+/*
+    larger screens
+*/
+@media screen and (min-width: 960px) {
+    main {
+        width: 50rem;
+        min-height: 31rem;
+        flex-direction: row;
+        padding: 70px 100px;
+        background: url('../images/bg-pattern-desktop.svg') -39.5rem -20rem no-repeat;
+    }
+
+    .faq {
+        min-width: 19rem;
+    }
+
+    header {
+        width: 50%;
+        overflow: visible;
+    }
+
+    .hero {
+        width: 140%;
+        height: auto;
+        left: -11rem;
+    }
+
+    h1 {
+        text-align: left;
+        padding-bottom: 40px;
+    }
+}
+
+/*
+    smaller screens
+*/
+@media screen and (max-width: 960px) {
+    main {
+        width: 22rem;
+        min-height: 33rem;
+        flex-direction: column;
+        background: url('../images/bg-pattern-mobile.svg') 50% 1% no-repeat;
+        margin: 0 20px;
+    }
+
+    .faq {
+        padding: 25px;
+        margin-top: -3rem;
+    }
+
+    h1 {
+        margin-top: -5rem;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .hero {
+        top: -7.7rem;
+        width: 86%;
+        height: 86%;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(var(--violet), var(--blue));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 17px 14px 0 rgba(0,0,0,0.2);
+    box-shadow: 5px 17px 14px 0 rgba(0,0,0,0.2);
+}
+
+header {
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+li {
+    list-style: none;
+}
+
+.question {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: white;
+    border: none;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark-gray-blue);
+    text-align: left;
+}
+
+.question:hover {
+    color: var(--red)
+}
+
+.active {
+    font-weight: 700;
+}
+
+img {
+    padding: 5px;
+    height: 18px;
+}
+
+.panel {
+    background-color: white;
+    overflow: hidden;
+    color: var(--gray-blue);
+    font-size: 13px;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    width: 100%;
+    max-width: 18rem;
+}
+
+hr {
+    margin: 10px 0;
+    color: var(--light-gray-blue);
+    opacity: 0.2;
+}
+
+.link {
+    color: darkblue;
+    text-decoration: none;
+}
